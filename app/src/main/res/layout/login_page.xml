@@ -1,0 +1,270 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/fiidup_red_background"
+    android:layout_marginLeft="-20dp"
+    android:layout_marginRight="-20dp"
+    android:layout_marginBottom="-20dp"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.fiidup.login.LoginPage">
+
+    <TextView
+        android:id="@+id/cover_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="@string/app_name"
+        android:layout_marginTop="30dp"
+        android:textSize="30dp"
+        />
+
+    <TextView
+        android:id="@+id/welcome_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="@string/welcome_message"
+        android:layout_marginTop="85dp"
+        android:textSize="15dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp">
+
+        <TextView
+            android:id="@+id/middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            />
+        <View
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignLeft="@id/middle"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/red_light_rounded_edge"
+            />
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignLeft="@id/middle"
+            android:layout_marginLeft="10dp"
+            android:onClick="showLoginView"
+            style="?android:attr/borderlessButtonStyle"/>
+
+        <View
+            android:id="@+id/signup_button"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignRight="@id/middle"
+            android:background="@drawable/red_dark_rounded_edge"
+            />
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignRight="@id/middle"
+            android:onClick="showSignUpView"
+            style="?android:attr/borderlessButtonStyle"/>
+
+        <TextView
+            android:text="LOG IN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_alignLeft="@id/middle"
+            />
+
+        <TextView
+            android:text="SIGN UP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50dp"
+            android:layout_alignRight="@id/middle"
+            />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-6dp"
+            android:layout_below="@+id/signup_button"
+            android:layout_centerHorizontal="true"
+            android:background="@color/fiidup_red_light"
+            android:id="@+id/login_view"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="USERNAME:"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:paddingLeft="10dp"
+                android:ems="15"
+                android:background="@drawable/textbox"
+                android:textColor="#000000"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PASSWORD:"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:paddingLeft="10dp"
+                android:ems="15"
+                android:background="@drawable/textbox"
+                android:textColor="#000000"
+                android:password="true"/>
+
+            <ImageButton
+                android:layout_width="73dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_height="50dp"
+                android:id="@+id/login_button"
+                android:layout_gravity="right"
+                android:layout_weight="0.12"
+                android:src="@drawable/left_arrow"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:onClick="goToMainPage"
+                style="?android:attr/borderlessButtonStyle"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-6dp"
+            android:layout_below="@+id/signup_button"
+            android:layout_centerHorizontal="true"
+            android:background="@color/fiidup_red_dark"
+            android:id="@+id/signup_view">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="USERNAME:"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:paddingLeft="10dp"
+                android:ems="15"
+                android:background="@drawable/textbox"
+                android:textColor="#000000"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PASSWORD:"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:paddingLeft="10dp"
+                android:ems="15"
+                android:background="@drawable/textbox"
+                android:textColor="#000000"
+                android:password="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CONFIRM PASSWORD:"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:textColor="#FFFFFF"
+                android:textSize="15dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:paddingLeft="10dp"
+                android:ems="15"
+                android:background="@drawable/textbox"
+                android:textColor="#000000"
+                android:password="true"/>
+
+            <ImageButton
+                android:layout_width="73dp"
+                android:layout_height="50dp"
+                android:src = "@drawable/left_arrow"
+                android:scaleType="fitXY"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="30dp"
+                android:onClick="goToMainPage"
+                />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
